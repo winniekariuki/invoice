@@ -18,7 +18,7 @@ export const getTopCustomersFailure = error => ({
   
 const getTopCustomers= (cartId) => dispatch => {
     dispatch(getTopCustomersRequest());
-      const url = `http://www.mocky.io/v2/5e3f6bd43300004200b04be5`;
+      const url = `http://127.0.0.1:8000/api/v1/top-customers-amount`;
     return axios(url)
         .then(response => {
          dispatch(getTopCustomersSuccess(response.data))
