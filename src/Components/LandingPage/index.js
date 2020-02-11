@@ -26,7 +26,7 @@ class LandingPage extends Component {
         });
 
         const postObject = {data: customersData}
-        axios.post('http://127.0.0.1:8000/api/v1/upload', postObject)
+        axios.post('https://csv-parse.herokuapp.com/api/v1/upload', postObject)
         this.props.history.push('/dashboard')
       }
       catch(e){

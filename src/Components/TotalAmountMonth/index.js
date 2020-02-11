@@ -11,7 +11,7 @@ class TotalAmount extends Component {
     };
   };
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/v1/monthly-total')
+    axios.get(`https://csv-parse.herokuapp.com/api/v1/monthly-total`)
       .then(response => response)
       .then(amount => {
 

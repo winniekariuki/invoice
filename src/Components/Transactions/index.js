@@ -22,7 +22,7 @@ class Transactions extends Component {
     
   }
   updateDate = newDate => {
-    axios.get(`http://127.0.0.1:8000/api/v1/invoice?date=${newDate}`)
+    axios.get(`https://csv-parse.herokuapp.com/api/v1/invoice?date=${newDate}`)
     .then(response => response)
     .then(data => {
 

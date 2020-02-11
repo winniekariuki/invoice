@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Chart from "react-google-charts";
 import axios from 'axios';
 import Dropdown from '../Dropdown/index'
+import Base_url from '../base-url';
 
 
 
@@ -15,7 +16,7 @@ class Customers extends Component {
    
   }
   componentDidMount() {
-    axios.get('http://127.0.0.1:8000/api/v1/top-customers-amount')
+    axios.get('https://csv-parse.herokuapp.com/api/v1/top-customers-amount')
       .then(response => response)
       .then(year => {
         const data = year.data
