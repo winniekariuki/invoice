@@ -1,43 +1,23 @@
 import React, { Component } from 'react';
-import Chart from "react-google-charts";
-import axios from 'axios';
-import { connect } from "react-redux";
-import getTopCustomers from "../../actions/getCustomers";
-import Customer from '../Customers';
+import Customers from '../Customers/index';
+import './dashboard.css';
+import Transactions from '../Transactions/index';
+import TotalAmount from '../TotalAmountMonth/index'
+import Navbar from '../Navbar/index'
 
 class Dashboard extends React.Component {
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        customers:null,
-      };
-    }
-  
-    componentDidMount(){
-        this.props.getTopCustomers();
-        console.log(this.props.customers,"NNN")
-    }
+   
 
     render() {
         console.log(this.props,"render")
       return (
-        <div className="App">
-          <Customer
-            data={this.state}
-            title={this.state}
-            color="#70CAD1"
-          />
+        <div className="container">
+         <Customers/>
+         <TotalAmount />
+         <Transactions/>
         </div>
       );
     }
   }
 
-export const mapStateToProps = state => ({
-    customers: state.customers,
-  });
-  export const mapDispatchToProps = dispatch => ({
-    getTopCustomers: () => dispatch(getTopCustomers()),
-    
-  });
-  export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
+  export default Dashboard;
