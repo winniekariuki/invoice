@@ -5,6 +5,7 @@
 .card-text{
     font-size: 15px;
     font-weight: 600;
+    background-color: bisque;
 }
 .card{
     width:100%;

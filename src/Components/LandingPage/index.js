@@ -45,7 +45,7 @@ class LandingPage extends Component {
             <CSVReader onFileLoaded={data => this.handleFileUpload(data)} />
               <br /><br /><br />
             </div>
-            <h2>Upload or drop your <font size={fontSize} color="#00A4FF">CSV</font><br /> file here.</h2>
+            <h2>Click the button above to upload your   <font size={fontSize} color="#00A4FF">CSV</font><br /> file.</h2>
           </div>
         )
       }

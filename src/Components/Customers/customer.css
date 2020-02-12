@@ -1,0 +1,20 @@
+.dropdown{
+    background-color: black;
+    width: 10%;
+    color: white;
+    padding-left: 19px;
+    border: none;
+    font-size: 18px;
+    display: block;
+
+}
+.dropdown:hover{
+   cursor: pointer; 
+}
+.bar-chart{
+
+}
+.loading{
+    font-size: medium;
+    color:white;
+}
