@@ -9,7 +9,9 @@ class Dashboard extends React.Component {
      render() {
       return (
         <div className="container">
-         <Customers/>
+          <div className="Bar-chart">
+            <Customers />
+            </div>
          <TotalAmount />
          <Transactions/>
         </div>
