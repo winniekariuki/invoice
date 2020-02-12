@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const converter = require('convert-csv-to-array');
 
- 
+
 class LandingPage extends Component {
   
       handleFileUpload(data) {

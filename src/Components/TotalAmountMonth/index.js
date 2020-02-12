@@ -47,7 +47,6 @@ sortDate = (dates) => {
   });
   
   const sortedResult = result.sort(function(a, b) {
-    // sort based on the value in the monthNames object
     return monthNames[a[0]] - monthNames[b[0]];
   });
   
@@ -57,7 +56,6 @@ sortDate = (dates) => {
   })
   
   dates[year] = singleYear;
-  console.log(singleYear, 'result')
   
   })
   return dates
@@ -90,7 +88,6 @@ sortDate = (dates) => {
 
   render() {
     const {totalAmount} = this.state;
-    console.log(totalAmount,"total amount")
     return (
       <div className="table-container">
         <table>

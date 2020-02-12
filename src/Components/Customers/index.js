@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Chart from "react-google-charts";
 import axios from 'axios';
-import Dropdown from '../Dropdown/index'
-import Base_url from '../base-url';
-
+import Dropdown from 'react-dropdown'
+import 'react-dropdown/style.css'
+import { AutoComplete, ComboBox, DropDownList, MultiSelect } from '@progress/kendo-react-dropdowns';
 
 
 class Customers extends Component {
@@ -11,7 +11,8 @@ class Customers extends Component {
     super(props);
     this.state = { 
       barChartData: null,
-      customers:null,
+      customers: null,
+      dateSelect: 2020
     };
    
   }
@@ -26,28 +27,43 @@ class Customers extends Component {
       )
     
   }
+  sizes = [ "X-Small", "Small", "Medium", "Large", "X-Large", "2X-Large" ];
+  state = {
+      value: null
+  };
+
+  handleChange = (event) => {
+      this.setState({
+          dateSelect: event.target.value
+      });
+  }
    
   render() {
     const { customers} = this.state
-  if (customers){
-    var year = 2020;
-    var Customers = customers[year]
+    if (customers) {
+  
+  var options = Object.keys(customers)
+      var Customers = customers[this.state.dateSelect]
       }
-  let output = []
+  var  output = []
   var colors =['#b87333', '#287333','#887333','#457f999','#c4598']
 
-  for(let key in Customers){
+  for(var key in Customers){
       output.push([key, Customers[key]],) 
   }
-  console.log(output,"output")
   output.map((item,index) => {
     item.push(colors[index])
     return item
   })   
+
   
-  
-   return (
-<div className="bar-container">
+    return (
+     <div className="bar-container">
+   <div className="col-xs-12 col-sm-7 example-col">
+                    <p>DropDownList</p>
+             <DropDownList data={options}  onChange={this.handleChange} defaultValue={this.state.dateSelect} />
+                </div>
+ 
 <Chart
   width={'500px'}
   height={'300px'}

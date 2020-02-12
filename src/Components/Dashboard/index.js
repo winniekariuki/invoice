@@ -6,10 +6,7 @@ import TotalAmount from '../TotalAmountMonth/index'
 import Navbar from '../Navbar/index'
 
 class Dashboard extends React.Component {
-   
-
-    render() {
-        console.log(this.props,"render")
+     render() {
       return (
         <div className="container">
          <Customers/>
