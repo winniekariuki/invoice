@@ -13,7 +13,7 @@
     "@testing-library/user-event": "^7.2.1",
     "apexcharts": "^3.15.5",
     "axios": "^0.19.2",
-    "chart.js": "^1.1.1",
+    "chart.js": "^2.9.4",
     "convert-csv-to-array": "^1.0.3",
     "csv": "^5.3.1",
     "moment": "^2.24.0",
